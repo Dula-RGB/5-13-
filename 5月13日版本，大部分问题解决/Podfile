@@ -1,0 +1,7 @@
+platform :ios, '15.0'
+
+target 'ACROSSDataCollection' do
+  use_frameworks!
+  
+  pod 'SnapKit'
+end

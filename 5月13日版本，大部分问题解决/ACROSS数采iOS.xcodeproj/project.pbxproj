@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D7A4F3A28D40C0800B84455 /* ACROSSDataCollection/AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F3928D40C0800B84455 /* ACROSSDataCollection/AppDelegate.swift */; };
+		8D7A4F3D28D40C0800B84455 /* ACROSSDataCollection/SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F3C28D40C0800B84455 /* ACROSSDataCollection/SceneDelegate.swift */; };
+		8D7A4F4628D40C0800B84455 /* ACROSSDataCollection/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7A4F4528D40C0800B84455 /* ACROSSDataCollection/Assets.xcassets */; };
+		8D7A4F4928D40C0800B84455 /* ACROSSDataCollection/LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D7A4F4828D40C0800B84455 /* ACROSSDataCollection/LaunchScreen.storyboard */; };
+		8D7A4F5228D40C0800B84455 /* Models/Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F5128D40C0800B84455 /* Models/Task.swift */; };
+		8D7A4F5528D40C0800B84455 /* Models/User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F5428D40C0800B84455 /* Models/User.swift */; };
+		8D7A4F5828D40C0800B84455 /* Models/MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F5728D40C0800B84455 /* Models/MockData.swift */; };
+		8D7A4F5B28D40C0800B84455 /* ViewControllers/HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F5A28D40C0800B84455 /* ViewControllers/HomeViewController.swift */; };
+		8D7A4F5E28D40C0800B84455 /* ViewControllers/TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F5D28D40C0800B84455 /* ViewControllers/TaskListViewController.swift */; };
+		8D7A4F6128D40C0800B84455 /* ViewControllers/TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F6028D40C0800B84455 /* ViewControllers/TaskDetailViewController.swift */; };
+		8D7A4F6428D40C0800B84455 /* ViewControllers/MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F6328D40C0800B84455 /* ViewControllers/MyTasksViewController.swift */; };
+
+		8D7A4F6A28D40C0800B84455 /* ViewControllers/EarningsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F6928D40C0800B84455 /* ViewControllers/EarningsDetailViewController.swift */; };
+		8D7A4F6D28D40C0800B84455 /* ViewControllers/LevelRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F6C28D40C0800B84455 /* ViewControllers/LevelRulesViewController.swift */; };
+		8D7A4F7028D40C0800B84455 /* Extensions/UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F6F28D40C0800B84455 /* Extensions/UIColorExtension.swift */; };
+		8D7A4F7328D40C0800B84455 /* Extensions/UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F7228D40C0800B84455 /* Extensions/UIViewExtension.swift */; };
+		8D7A4F7C28D40C0800B84455 /* Models/AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F7D28D40C0800B84455 /* Models/AppConfig.swift */; };
+		8D7A4F7E28D40C0800B84455 /* Network/NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F7F28D40C0800B84455 /* Network/NetworkManager.swift */; };
+		8D7A4F8128D40C0800B84455 /* ViewControllers/LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A4F8228D40C0800B84455 /* ViewControllers/LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D7A4F3928D40C0800B84455 /* ACROSSDataCollection/AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACROSSDataCollection/AppDelegate.swift; sourceTree = "<group>"; };
+		8D7A4F3C28D40C0800B84455 /* ACROSSDataCollection/SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACROSSDataCollection/SceneDelegate.swift; sourceTree = "<group>"; };
+		8D7A4F4528D40C0800B84455 /* ACROSSDataCollection/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ACROSSDataCollection/Assets.xcassets; sourceTree = "<group>"; };
+		8D7A4F4828D40C0800B84455 /* ACROSSDataCollection/LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ACROSSDataCollection/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D7A4F4E28D40C0800B84455 /* ACROSSDataCollection/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ACROSSDataCollection/Info.plist; sourceTree = "<group>"; };
+		8D7A4F5128D40C0800B84455 /* Models/Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Task.swift; sourceTree = "<group>"; };
+		8D7A4F5428D40C0800B84455 /* Models/User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		8D7A4F5728D40C0800B84455 /* Models/MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/MockData.swift; sourceTree = "<group>"; };
+		8D7A4F5A28D40C0800B84455 /* ViewControllers/HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
+		8D7A4F5D28D40C0800B84455 /* ViewControllers/TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers/TaskListViewController.swift; sourceTree = "<group>"; };
+		8D7A4F6028D40C0800B84455 /* ViewControllers/TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers/TaskDetailViewController.swift; sourceTree = "<group>"; };
+		8D7A4F6328D40C0800B84455 /* ViewControllers/MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers/MyTasksViewController.swift; sourceTree = "<group>"; };
+
+		8D7A4F6928D40C0800B84455 /* ViewControllers/EarningsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers/EarningsDetailViewController.swift; sourceTree = "<group>"; };
+		8D7A4F6C28D40C0800B84455 /* ViewControllers/LevelRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers/LevelRulesViewController.swift; sourceTree = "<group>"; };
+		8D7A4F6F28D40C0800B84455 /* Extensions/UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions/UIColorExtension.swift; sourceTree = "<group>"; };
+		8D7A4F7228D40C0800B84455 /* Extensions/UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions/UIViewExtension.swift; sourceTree = "<group>"; };
+		8D7A4F7528D40C0800B84455 /* ACROSS数采iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ACROSS数采iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D7A4F7D28D40C0800B84455 /* Models/AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/AppConfig.swift; sourceTree = "<group>"; };
+		8D7A4F7F28D40C0800B84455 /* Network/NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network/NetworkManager.swift; sourceTree = "<group>"; };
+		8D7A4F8228D40C0800B84455 /* ViewControllers/LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D7A4F3628D40C0800B84455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D7A4F2B28D40C0800B84455 = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F5028D40C0800B84455,
+				8D7A4F6E28D40C0800B84455,
+				8D7A4F5928D40C0800B84455,
+				8D7A4F8028D40C0800B84455 /* Network */,
+				8D7A4F3828D40C0800B84455,
+				8D7A4F4428D40C0800B84455,
+			);
+			sourceTree = "<group>";
+		};
+		8D7A4F3828D40C0800B84455 = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F3928D40C0800B84455 /* ACROSSDataCollection/AppDelegate.swift */,
+				8D7A4F3C28D40C0800B84455 /* ACROSSDataCollection/SceneDelegate.swift */,
+				8D7A4F4528D40C0800B84455 /* ACROSSDataCollection/Assets.xcassets */,
+				8D7A4F4828D40C0800B84455 /* ACROSSDataCollection/LaunchScreen.storyboard */,
+				8D7A4F4E28D40C0800B84455 /* ACROSSDataCollection/Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		8D7A4F4428D40C0800B84455 = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F7528D40C0800B84455 /* ACROSS数采iOS.app */,
+			);
+			sourceTree = "<group>";
+		};
+		8D7A4F5028D40C0800B84455 = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F5128D40C0800B84455 /* Models/Task.swift */,
+				8D7A4F5428D40C0800B84455 /* Models/User.swift */,
+				8D7A4F5728D40C0800B84455 /* Models/MockData.swift */,
+				8D7A4F7D28D40C0800B84455 /* Models/AppConfig.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		8D7A4F5928D40C0800B84455 = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F5A28D40C0800B84455 /* ViewControllers/HomeViewController.swift */,
+				8D7A4F5D28D40C0800B84455 /* ViewControllers/TaskListViewController.swift */,
+				8D7A4F6028D40C0800B84455 /* ViewControllers/TaskDetailViewController.swift */,
+				8D7A4F6328D40C0800B84455 /* ViewControllers/MyTasksViewController.swift */,
+				8D7A4F6928D40C0800B84455 /* ViewControllers/EarningsDetailViewController.swift */,
+				8D7A4F6C28D40C0800B84455 /* ViewControllers/LevelRulesViewController.swift */,
+				8D7A4F8228D40C0800B84455 /* ViewControllers/LoginViewController.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		8D7A4F6E28D40C0800B84455 = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F6F28D40C0800B84455 /* Extensions/UIColorExtension.swift */,
+				8D7A4F7228D40C0800B84455 /* Extensions/UIViewExtension.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		8D7A4F8028D40C0800B84455 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8D7A4F7F28D40C0800B84455 /* Network/NetworkManager.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D7A4F3728D40C0800B84455 /* ACROSS数采iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D7A4F7B28D40C0800B84455 /* Build configuration list for PBXNativeTarget "ACROSS数采iOS" */;
+			buildPhases = (
+				8D7A4F3628D40C0800B84455 /* Frameworks */,
+				8D7A4F3B28D40C0800B84455 /* Sources */,
+				8D7A4F4128D40C0800B84455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ACROSS数采iOS";
+			productName = ACROSSDataCollection;
+			productReference = 8D7A4F7528D40C0800B84455 /* ACROSS数采iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D7A4F2A28D40C0800B84455 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				OrganizationName = ACROSS;
+				TargetAttributes = {
+					8D7A4F3728D40C0800B84455 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 8D7A4F7628D40C0800B84455 /* Build configuration list for PBXProject "ACROSS数采iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Chinese,
+			);
+			mainGroup = 8D7A4F2B28D40C0800B84455;
+			productRefGroup = 8D7A4F4428D40C0800B84455;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D7A4F3728D40C0800B84455 /* ACROSS数采iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D7A4F4128D40C0800B84455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D7A4F4628D40C0800B84455 /* ACROSSDataCollection/Assets.xcassets in Resources */,
+				8D7A4F4928D40C0800B84455 /* ACROSSDataCollection/LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D7A4F3B28D40C0800B84455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D7A4F3A28D40C0800B84455 /* ACROSSDataCollection/AppDelegate.swift in Sources */,
+				8D7A4F3D28D40C0800B84455 /* ACROSSDataCollection/SceneDelegate.swift in Sources */,
+				8D7A4F5228D40C0800B84455 /* Models/Task.swift in Sources */,
+				8D7A4F5528D40C0800B84455 /* Models/User.swift in Sources */,
+				8D7A4F5828D40C0800B84455 /* Models/MockData.swift in Sources */,
+				8D7A4F7C28D40C0800B84455 /* Models/AppConfig.swift in Sources */,
+				8D7A4F5B28D40C0800B84455 /* ViewControllers/HomeViewController.swift in Sources */,
+				8D7A4F5E28D40C0800B84455 /* ViewControllers/TaskListViewController.swift in Sources */,
+				8D7A4F6128D40C0800B84455 /* ViewControllers/TaskDetailViewController.swift in Sources */,
+				8D7A4F6428D40C0800B84455 /* ViewControllers/MyTasksViewController.swift in Sources */,
+				8D7A4F6A28D40C0800B84455 /* ViewControllers/EarningsDetailViewController.swift in Sources */,
+				8D7A4F6D28D40C0800B84455 /* ViewControllers/LevelRulesViewController.swift in Sources */,
+				8D7A4F7028D40C0800B84455 /* Extensions/UIColorExtension.swift in Sources */,
+				8D7A4F7328D40C0800B84455 /* Extensions/UIViewExtension.swift in Sources */,
+				8D7A4F7E28D40C0800B84455 /* Network/NetworkManager.swift in Sources */,
+				8D7A4F8128D40C0800B84455 /* ViewControllers/LoginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8D7A4F7728D40C0800B84455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ACROSSDataCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D7A4F7828D40C0800B84455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ACROSSDataCollection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8D7A4F7928D40C0800B84455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UV7699WN5C;
+				INFOPLIST_FILE = ACROSSDataCollection/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "数采赚币ios版";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuboxvan.datacollection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8D7A4F7A28D40C0800B84455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UV7699WN5C;
+				INFOPLIST_FILE = ACROSSDataCollection/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "数采赚币ios版";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuboxvan.datacollection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D7A4F7628D40C0800B84455 /* Build configuration list for PBXProject "ACROSS数采iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D7A4F7728D40C0800B84455 /* Debug */,
+				8D7A4F7828D40C0800B84455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D7A4F7B28D40C0800B84455 /* Build configuration list for PBXNativeTarget "ACROSS数采iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D7A4F7928D40C0800B84455 /* Debug */,
+				8D7A4F7A28D40C0800B84455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D7A4F2A28D40C0800B84455 /* Project object */;
+}

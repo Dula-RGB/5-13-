@@ -1,0 +1,160 @@
+name: Build Signed IPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build Type'
+        required: true
+        default: 'release'
+        type: choice
+        options:
+          - debug
+n          - release
+      signing_type:
+        description: 'Signing Type'
+        required: true
+        default: 'adhoc'
+        type: choice
+        options:
+          - development
+          - adhoc
+          - appstore
+
+jobs:
+  build-signed:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '15.0'
+
+    - name: Install CocoaPods
+      run: |
+        gem install cocoapods
+        pod install --repo-update
+
+    - name: Cache CocoaPods
+      uses: actions/cache@v3
+      with:
+        path: Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-
+
+    - name: Install Dependencies
+      run: pod install
+
+    # 配置签名证书和描述文件
+    # 需要先在 GitHub Secrets 中设置以下变量：
+    # - P12_CERTIFICATE: Base64 编码的 .p12 证书文件
+    # - P12_PASSWORD: 证书密码
+    # - MOBILEPROVISION: Base64 编码的描述文件
+    # - TEAM_ID: Apple Developer Team ID
+
+    - name: Setup Signing
+      env:
+        P12_CERTIFICATE: ${{ secrets.P12_CERTIFICATE }}
+        P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
+        MOBILEPROVISION: ${{ secrets.MOBILEPROVISION }}
+        TEAM_ID: ${{ secrets.TEAM_ID }}
+      run: |
+        # 创建临时钥匙串
+        security create-keychain -p "github-actions" build.keychain
+        security default-keychain -s build.keychain
+        security unlock-keychain -p "github-actions" build.keychain
+        security set-keychain-settings -t 3600 -u build.keychain
+
+        # 导入证书
+        echo "$P12_CERTIFICATE" | base64 --decode > certificate.p12
+        security import certificate.p12 -k build.keychain -P "$P12_PASSWORD" -T /usr/bin/codesign
+        security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "github-actions" build.keychain
+
+        # 安装描述文件
+        echo "$MOBILEPROVISION" | base64 --decode > ACROSSDataCollection.mobileprovision
+        mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+        cp ACROSSDataCollection.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+
+    - name: Create ExportOptions.plist
+      env:
+        TEAM_ID: ${{ secrets.TEAM_ID }}
+        SIGNING_TYPE: ${{ github.event.inputs.signing_type }}
+      run: |
+        cat > ExportOptions.plist << EOF
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        <plist version="1.0">
+        <dict>
+            <key>method</key>
+            <string>$SIGNING_TYPE</string>
+            <key>teamID</key>
+            <string>$TEAM_ID</string>
+            <key>provisioningProfiles</key>
+            <dict>
+                <key>com.across.datacollection</key>
+                <string>ACROSSDataCollection</string>
+            </dict>
+            <key>uploadSymbols</key>
+            <true/>
+            <key>uploadBitcode</key>
+            <false/>
+            <key>compileBitcode</key>
+            <false/>
+        </dict>
+        </plist>
+        EOF
+
+    - name: Build Archive
+      run: |
+        CONFIGURATION="Release"
+        if [ "${{ github.event.inputs.build_type }}" == "debug" ]; then
+          CONFIGURATION="Debug"
+        fi
+
+        xcodebuild archive \
+          -workspace "ACROSS数采iOS.xcworkspace" \
+          -scheme "ACROSSDataCollection" \
+          -configuration "$CONFIGURATION" \
+          -archivePath "build/ACROSSDataCollection.xcarchive" \
+          -destination "generic/platform=iOS" \
+          CODE_SIGN_STYLE=Manual \
+          CODE_SIGN_IDENTITY="iPhone Distribution" \
+          PROVISIONING_PROFILE_SPECIFIER="ACROSSDataCollection"
+
+    - name: Export IPA
+      run: |
+        xcodebuild -exportArchive \
+          -archivePath "build/ACROSSDataCollection.xcarchive" \
+          -exportPath "build/output" \
+          -exportOptionsPlist "ExportOptions.plist"
+
+    - name: Rename IPA
+      run: |
+        cd build/output
+        for ipa in *.ipa; do
+          mv "$ipa" "ACROSSDataCollection-${{ github.event.inputs.build_type }}-${{ github.event.inputs.signing_type }}.ipa"
+        done
+
+    - name: Upload IPA
+      uses: actions/upload-artifact@v4
+      with:
+        name: ACROSSDataCollection-Signed-IPA
+        path: build/output/*.ipa
+        retention-days: 30
+
+    - name: Create Release
+      if: github.event.inputs.signing_type == 'appstore'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: build/output/*.ipa
+        tag_name: v${{ github.run_number }}
+        name: Release v${{ github.run_number }}
+        draft: true
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- 背景圆角矩形 -->
+  <rect width="1024" height="1024" rx="200" ry="200" fill="#eeeeee"/>
+  
+  <!-- 蓝色圆形背景 -->
+  <circle cx="512" cy="512" r="384" fill="url(#blueGradient)"/>
+  
+  <!-- 渐变定义 -->
+  <defs>
+    <radialGradient id="blueGradient" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- 四个元素：三个圆角方块 + 一个圆形 -->
+  <!-- 左上角：圆角方块（白色） -->
+  <rect x="300" y="320" width="180" height="180" rx="32" ry="32" fill="white"/>
+  
+  <!-- 右上角：圆形（白色，半透明） -->
+  <circle cx="634" cy="410" r="90" fill="white" opacity="0.5"/>
+  
+  <!-- 左下角：圆角方块（白色） -->
+  <rect x="300" y="520" width="180" height="180" rx="32" ry="32" fill="white"/>
+  
+  <!-- 右下角：圆角方块（白色） -->
+  <rect x="544" y="520" width="180" height="180" rx="32" ry="32" fill="white"/>
+</svg>
