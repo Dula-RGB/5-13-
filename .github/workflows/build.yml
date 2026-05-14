@@ -21,7 +21,7 @@ jobs:
       - name: Build iOS app
         run: |
           xcodebuild archive \
-            -project "ACROSS数采iOS.xcodeproj" \
+            -project "5月13日版本，大部分问题解决/ACROSS数采iOS.xcodeproj" \
             -scheme "ACROSS数采iOS" \
             -configuration Release \
             -archivePath build/MyApp.xcarchive \
